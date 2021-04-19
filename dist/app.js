@@ -7,9 +7,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 function ClassDecorator(x) {
     return class extends x {
-        constructor(...rest) {
-            super();
-            console.log(rest);
+        constructor() {
+            super(...arguments);
+            this.location = 'ktm';
+            this.name = 'ryan';
         }
     };
 }
@@ -29,3 +30,4 @@ let Person = /** @class */ (() => {
     return Person;
 })();
 let p = new Person('jacob', 23);
+console.log(p);

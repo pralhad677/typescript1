@@ -3,10 +3,8 @@ type ConstructorFunction = new (...args: any[]) => any
 
 function ClassDecorator<T extends ConstructorFunction>(x:T){
     return class extends x{
-        constructor(...rest:any[]){
-            super()
-            console.log(rest)
-        }
+        location='ktm';
+        name='ryan'
     }
 } 
  @ClassDecorator
@@ -18,3 +16,4 @@ class Person {
     }
 }
 let p = new Person('jacob',23)
+console.log(p)
